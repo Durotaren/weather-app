@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  margin: 64px;
+}
+
+.left-side {
+  height: 85vh;
+  width: 280px;
+}
