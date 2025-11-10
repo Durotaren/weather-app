@@ -1,3 +1,9 @@
 * {
   font-family: 'Satoshi', sans-serif;
 }
+
+html {
+  background-image: url(../assets/storm.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
