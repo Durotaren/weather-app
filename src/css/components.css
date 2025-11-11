@@ -10,7 +10,7 @@
 
 .column {
   height: 800px;
-  width: 280px;
+  width: 320px;
   margin-left: 48px;
   border-radius: 32px;
 }
@@ -41,5 +41,39 @@
 }
 
 span {
-  color: rgb(192, 189, 189);
+  color: rgb(185, 191, 196);
+}
+
+.temp {
+  color: white;
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.temperature-container {
+  margin-top: 40px;
+}
+
+.today {
+  width: 100px;
+  border-radius: 35px;
+  font-size: 20px;
+}
+
+.high {
+  margin-bottom: 8px;
+}
+
+.today-left {
+  margin-left: 8px;
+  color: rgb(137, 137, 137);
+}
+
+.today-right {
+  margin-right: 8px;
+}
+
+.right-info {
+  margin-left: auto;
+  width: 340px;
 }

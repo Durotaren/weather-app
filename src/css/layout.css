@@ -27,3 +27,19 @@ body {
   gap: 12px;
   align-items: center;
 }
+
+.left-temp {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.today {
+  display: flex;
+  justify-content: space-between;
+}
+
+.temperature-container {
+  display: flex;
+  align-items: center;
+}
