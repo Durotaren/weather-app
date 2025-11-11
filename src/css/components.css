@@ -1,7 +1,7 @@
 .glass {
   background: rgba(255, 255, 255, 0.1); /* semi-transparent layer */
   color: white;
-  backdrop-filter: blur(7px); /* this creates the frosted blur effect */
+  backdrop-filter: blur(16px); /* this creates the frosted blur effect */
   -webkit-backdrop-filter: blur(7px); /* Safari support */
   border: 1px solid rgba(255, 255, 255, 0.2); /* soft glass border */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
@@ -11,7 +11,7 @@
 .column {
   height: 800px;
   width: 320px;
-  margin-left: 48px;
+  margin-left: 54px;
   border-radius: 32px;
 }
 
@@ -19,7 +19,7 @@
   height: 800px;
   flex: 1;
   /* border: 1px solid red; */
-  margin-right: 48px;
+  margin-right: 54px;
 }
 
 .search {
@@ -75,5 +75,28 @@ span {
 
 .right-info {
   margin-left: auto;
-  width: 340px;
+  width: 360px;
+  font-size: 20px;
+}
+
+.recently-searched {
+  margin-left: auto;
+}
+
+.main-weather {
+  font-size: 5rem;
+  width: 800px;
+  text-wrap: balance;
+  line-height: 5rem;
+}
+
+.main-weather-para {
+  color: rgb(204, 204, 204);
+  height: 170px;
+}
+
+.widget {
+  width: 175px;
+  height: 175px;
+  border-radius: 35px;
 }
