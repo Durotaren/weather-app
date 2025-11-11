@@ -1,0 +1,22 @@
+.glass {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent layer */
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  backdrop-filter: blur(7px); /* this creates the frosted blur effect */
+  -webkit-backdrop-filter: blur(7px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* soft glass border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* adds depth */
+  max-width: 300px;
+  text-align: center;
+}
+
+.column {
+  height: 800px;
+  width: 280px;
+}
+
+.main {
+  height: 800px;
+  flex: 1;
+}

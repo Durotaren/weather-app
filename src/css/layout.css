@@ -1,9 +1,10 @@
 body {
   display: flex;
-  margin: 64px;
 }
 
 .left-side {
-  height: 85vh;
-  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 32px;
 }

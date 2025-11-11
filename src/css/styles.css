@@ -1,17 +1,9 @@
 body {
-  background-image: url(../assets/very-cloudy.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 35px;
-  padding: 2rem;
-  color: white;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  margin: 0;
+  height: 100vh; /* Fill the visible viewport */
+  background-image: url('../assets/images/very-cloudy.jpg');
+  background-size: cover; /* Scale to cover the screen */
+  background-position: center; /* Keep it centered */
+  background-repeat: no-repeat; /* Avoid tiling */
+  background-attachment: fixed; /* Keeps it still when resizing */
 }

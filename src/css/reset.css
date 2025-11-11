@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  max-height: 100vh;
-}
-
 button,
 input {
   font: inherit;
