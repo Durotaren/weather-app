@@ -67,3 +67,10 @@ body {
   display: flex;
   gap: 0.75rem;
 }
+
+.svg-temp-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 24px 0;
+}
