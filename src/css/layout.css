@@ -74,3 +74,9 @@ body {
   align-items: center;
   margin: 24px 0;
 }
+
+.days-container {
+  display: flex;
+  gap: 9rem;
+  margin-top: 3rem;
+}

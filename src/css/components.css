@@ -99,3 +99,7 @@ span {
   height: 175px;
   border-radius: 35px;
 }
+
+.days-container > div > p {
+  font-size: 1.5rem;
+}
