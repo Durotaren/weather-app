@@ -77,6 +77,14 @@ body {
 
 .days-container {
   display: flex;
-  gap: 9rem;
+  justify-content: space-around;
   margin-top: 3rem;
+}
+
+.day-container {
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

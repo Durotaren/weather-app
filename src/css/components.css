@@ -1,7 +1,7 @@
 .glass {
   background: rgba(255, 255, 255, 0.1); /* semi-transparent layer */
   color: white;
-  backdrop-filter: blur(16px); /* this creates the frosted blur effect */
+  backdrop-filter: blur(12px); /* this creates the frosted blur effect */
   -webkit-backdrop-filter: blur(7px); /* Safari support */
   border: 1px solid rgba(255, 255, 255, 0.2); /* soft glass border */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
@@ -100,6 +100,10 @@ span {
   border-radius: 35px;
 }
 
-.days-container > div > p {
+.days-container > .day-container > p {
   font-size: 1.5rem;
+}
+
+.days-container > .day-container > p.degrees {
+  font-size: 2.5rem;
 }

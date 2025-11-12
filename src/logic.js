@@ -12,6 +12,9 @@ export const logic = (() => {
       }
 
       const data = await result.json();
+      console.log(data);
+
+      console.log(data.currentConditions.conditions);
       console.log(data.currentConditions.temp);
 
       return { data };
