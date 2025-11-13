@@ -6,7 +6,7 @@
 body {
   margin: 0;
   height: 100vh; /* Fill the visible viewport */
-  background-image: url('../assets/images/very-cloudy.jpg');
+  background-image: url('../assets/images/cloudy.jpg');
   background-size: cover; /* Scale to cover the screen */
   background-position: center; /* Keep it centered */
   background-repeat: no-repeat; /* Avoid tiling */
