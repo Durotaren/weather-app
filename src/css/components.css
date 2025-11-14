@@ -101,6 +101,10 @@ span {
   border-radius: 35px;
 }
 
+.day-container {
+  width: 123px;
+}
+
 .days-container > .day-container > p {
   font-size: 1.5rem;
 }
