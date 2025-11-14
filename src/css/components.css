@@ -68,7 +68,8 @@ span {
   color: rgb(137, 137, 137);
 }
 
-.today-right {
+.today-right-high,
+.today-right-low {
   margin-right: 8px;
 }
 
@@ -115,5 +116,5 @@ span {
 }
 
 #search-input {
-  margin-left: 24px;
+  margin-left: 20px;
 }
