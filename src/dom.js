@@ -5,7 +5,10 @@ import overcastIcon from './assets/svgs/overcast.svg';
 import rainyIcon from './assets/svgs/rainy.svg';
 import snowyIcon from './assets/svgs/snowy.svg';
 import sunnyBackground from './assets/images/sunny.jpg';
+import cloudyBackground from './assets/images/cloudy.jpg';
 import overcastBackground from './assets/images/very-cloudy.jpg';
+import rainyBackground from './assets/images/rainy.jpg';
+import snowyBackground from './assets/images/snow.jpg';
 
 export const dom = (() => {
   const body = document.body;
@@ -13,6 +16,7 @@ export const dom = (() => {
   const tempDisplay = document.querySelector('.temp');
   const todayHigh = document.querySelector('.today-right-high');
   const todayLow = document.querySelector('.today-right-low');
+  const mainWeatherPara = document.querySelector('.main-weather-para');
 
   const chooseSvg = (data) => {
     switch (data) {
@@ -34,13 +38,13 @@ export const dom = (() => {
       case 'Clear':
         return sunnyBackground;
       case 'Partially cloudy':
-        return overcastBackground;
+        return cloudyBackground;
       case 'Overcast':
         return overcastBackground;
       case 'Rain':
-        return sunnyBackground;
+        return rainyBackground;
       case 'Snow':
-        return overcastBackground;
+        return snowyBackground;
       default:
         return overcastBackground;
     }
@@ -51,6 +55,7 @@ export const dom = (() => {
     todayHigh.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
     todayLow.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmin))}°C`;
     document.body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
+    mainWeatherPara.textContent = data.fiveDays[0].description;
   };
 
   const updateDayContainers = (data) => {
@@ -62,7 +67,6 @@ export const dom = (() => {
         .split(',')
         .splice(0, 1)
         .join('');
-      console.log(conditions);
 
       const date = new Date(data.fiveDays[counter].datetime);
       const day = date.toLocaleDateString('en-US', { weekday: 'long' });
