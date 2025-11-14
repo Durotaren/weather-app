@@ -1,10 +1,6 @@
 export const logic = (() => {
   const apiKey = 'A58FRBCCTVYQN9LT7Q79Z67WZ';
 
-  // function fahrenheitToC(f) {
-  //   return ((f - 32) * 5) / 9;
-  // }
-
   const fahrenheitToC = (f) => ((f - 32) * 5) / 9;
 
   const fetchWeather = async (city) => {
