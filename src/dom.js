@@ -17,6 +17,7 @@ export const dom = (() => {
   const todayHigh = document.querySelector('.today-right-high');
   const todayLow = document.querySelector('.today-right-low');
   const mainWeatherPara = document.querySelector('.main-weather-para');
+  const locationDiv = document.querySelector('.location-text');
 
   const chooseSvg = (data) => {
     switch (data) {
@@ -50,12 +51,19 @@ export const dom = (() => {
     }
   };
 
-  const updateDisplay = (data) => {
+  const updateDisplay = (data, country) => {
     tempDisplay.textContent = `${data.currentTemp}°C`;
     todayHigh.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
     todayLow.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmin))}°C`;
-    document.body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
+    body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
     mainWeatherPara.textContent = data.fiveDays[0].description;
+    locationDiv.firstElementChild.textContent = `${data.city}, ${country}`;
+    // locationDiv.lastElementChild.textContent =
+    //   data.fiveDays[0].datetime.toLocaleDateString('en-US', {
+    //     weekday: 'long',
+    //     month: 'long',
+    //     day: 'numeric',
+    //   });
   };
 
   const updateDayContainers = (data) => {

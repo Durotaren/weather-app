@@ -14,8 +14,28 @@ export const logic = (() => {
       }
 
       const data = await result.json();
+      console.log(data);
 
       return cleanData(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const fetchCountry = async (city) => {
+    try {
+      const result = await fetch(
+        `https://geocoding-api.open-meteo.com/v1/search?name=${city}`
+      );
+
+      if (!result.ok) {
+        throw new Error('Failed');
+      }
+
+      const clean = await result.json();
+      console.log(clean, clean.results[0].country);
+
+      return clean.results[0].country;
     } catch (err) {
       console.error(err);
     }
@@ -28,5 +48,5 @@ export const logic = (() => {
     fiveDays: data.days.splice(0, 5),
   });
 
-  return { fetchWeather, fahrenheitToC };
+  return { fetchWeather, fahrenheitToC, fetchCountry };
 })();

@@ -14,7 +14,8 @@ const controller = (() => {
       input.value.charAt(0).toUpperCase() + input.value.slice(1).toLowerCase();
 
     const data = await logic.fetchWeather(formatInput);
-    dom.updateDisplay(data);
+    const cityData = await logic.fetchCountry(formatInput);
+    dom.updateDisplay(data, cityData);
     dom.updateDayContainers(data);
     input.value = '';
   });

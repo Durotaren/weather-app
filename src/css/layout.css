@@ -28,6 +28,11 @@ body {
   align-items: center;
 }
 
+.location-text {
+  display: flex;
+  gap: 0.3rem;
+}
+
 .left-temp {
   display: flex;
   align-items: center;
