@@ -58,12 +58,15 @@ export const dom = (() => {
     body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
     mainWeatherPara.textContent = data.fiveDays[0].description;
     locationDiv.firstElementChild.textContent = `${data.city}, ${country}`;
-    // locationDiv.lastElementChild.textContent =
-    //   data.fiveDays[0].datetime.toLocaleDateString('en-US', {
-    //     weekday: 'long',
-    //     month: 'long',
-    //     day: 'numeric',
-    //   });
+    const newDate = new Date(data.fiveDays[0].datetime);
+    locationDiv.lastElementChild.textContent = `( ${newDate.toLocaleDateString(
+      'en-US',
+      {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+      }
+    )} )`;
   };
 
   const updateDayContainers = (data) => {

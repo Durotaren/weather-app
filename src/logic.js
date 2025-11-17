@@ -14,7 +14,7 @@ export const logic = (() => {
       }
 
       const data = await result.json();
-      console.log(data);
+      console.log(data, data.days[0].datetime);
 
       return cleanData(data);
     } catch (err) {
@@ -33,7 +33,6 @@ export const logic = (() => {
       }
 
       const clean = await result.json();
-      console.log(clean, clean.results[0].country);
 
       return clean.results[0].country;
     } catch (err) {
