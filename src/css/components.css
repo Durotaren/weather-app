@@ -9,14 +9,14 @@
 }
 
 .column {
-  height: 800px;
+  min-height: 90%;
   width: 320px;
   margin-left: 54px;
   border-radius: 32px;
 }
 
 .main {
-  height: 800px;
+  /* min-height: 90%; */
   flex: 1;
   margin-right: 54px;
 }
@@ -30,7 +30,7 @@
 
 .download {
   height: 48px;
-  width: 160px;
+  width: 125px;
   border-radius: 35px;
 }
 
@@ -85,9 +85,9 @@ span {
 
 .main-weather {
   font-size: 4rem;
-  width: 800px;
+  /* width: 800px; */
   text-wrap: balance;
-  line-height: 5rem;
+  line-height: 4.5rem;
 }
 
 .main-weather-para {
@@ -126,4 +126,23 @@ span {
 .column-title {
   font-size: 2rem;
   padding-top: 2.5rem;
+}
+
+.column p {
+  font-size: 1.5rem;
+}
+
+.sunrise-sunset-container {
+  padding: 16px;
+  margin-top: 4rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 80%;
+  border-radius: 25px;
+}
+.hourly-container {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 80%;
+  border-radius: 25px;
+  margin: 8px auto 0;
+  padding: 16px;
 }
