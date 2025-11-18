@@ -122,3 +122,8 @@ span {
 #search-input {
   margin-left: 20px;
 }
+
+.column-title {
+  font-size: 2rem;
+  padding-top: 2.5rem;
+}

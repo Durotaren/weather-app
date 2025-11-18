@@ -10,8 +10,21 @@ const controller = (() => {
       return;
     }
 
-    let formatInput =
-      input.value.charAt(0).toUpperCase() + input.value.slice(1).toLowerCase();
+    let formatInput;
+
+    if (input.value.split(' ').length === 1) {
+      formatInput =
+        input.value.charAt(0).toUpperCase() +
+        input.value.slice(1).toLowerCase();
+    } else {
+      formatInput = input.value
+        .split(' ')
+        .map(
+          (element) =>
+            element.charAt(0).toUpperCase() + element.slice(1).toLowerCase()
+        )
+        .join(' ');
+    }
 
     const data = await logic.fetchWeather(formatInput);
     const cityData = await logic.fetchCountry(formatInput);
