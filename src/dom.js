@@ -18,6 +18,10 @@ export const dom = (() => {
   const todayLow = document.querySelector('.today-right-low');
   const mainWeatherPara = document.querySelector('.main-weather-para');
   const locationDiv = document.querySelector('.location-text');
+  const sunrisePara = document.querySelector('.sunrise-time');
+  const sunsetPara = document.querySelector('.sunset-time');
+  const hourlyTemperatures = document.querySelectorAll('.hourly-temperature');
+  console.log(hourlyTemperatures);
 
   const chooseSvg = (data) => {
     switch (data) {
@@ -51,6 +55,22 @@ export const dom = (() => {
     }
   };
 
+  const updateSunriseSunset = (data) => {
+    sunrisePara.textContent = data.fiveDays[0].sunrise.slice(0, 5);
+    sunsetPara.textContent = data.fiveDays[0].sunset.slice(0, 5);
+  };
+
+  const updateHourly = (data) => {
+    let counter = new Date().getHours();
+
+    hourlyTemperatures.forEach((element) => {
+      element.textContent = `${data.fiveDays[0].hours[counter].datetime.slice(0, 5)} ${Math.round(
+        logic.fahrenheitToC(data.fiveDays[0].hours[counter].temp)
+      )}°C`;
+      counter++;
+    });
+  };
+
   const updateDisplay = (data, country) => {
     tempDisplay.textContent = `${data.currentTemp}°C`;
     todayHigh.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
@@ -58,6 +78,8 @@ export const dom = (() => {
     body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
     mainWeatherPara.textContent = data.fiveDays[0].description;
     locationDiv.firstElementChild.textContent = `${data.city}, ${country}`;
+    updateSunriseSunset(data);
+    updateHourly(data);
     const newDate = new Date(data.fiveDays[0].datetime);
     locationDiv.lastElementChild.textContent = `( ${newDate.toLocaleDateString(
       'en-US',
