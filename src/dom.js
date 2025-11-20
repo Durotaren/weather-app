@@ -21,7 +21,7 @@ export const dom = (() => {
   const sunrisePara = document.querySelector('.sunrise-time');
   const sunsetPara = document.querySelector('.sunset-time');
   const hourlyTemperatures = document.querySelectorAll('.hourly-temperature');
-  console.log(hourlyTemperatures);
+  const widgets = document.querySelectorAll('.widget');
 
   const chooseSvg = (data) => {
     switch (data) {
@@ -61,7 +61,7 @@ export const dom = (() => {
   };
 
   const updateHourly = (data) => {
-    let counter = new Date().getHours();
+    let counter = new Date().getHours() > 18 ? 18 : new Date().getHours();
 
     hourlyTemperatures.forEach((element) => {
       element.textContent = `${data.fiveDays[0].hours[counter].datetime.slice(0, 5)} ${Math.round(
@@ -69,6 +69,12 @@ export const dom = (() => {
       )}°C`;
       counter++;
     });
+  };
+
+  const updateWhole = (data, country) => {
+    updateDisplay(data, country);
+    updateDayContainers(data);
+    updateWidget(data, country);
   };
 
   const updateDisplay = (data, country) => {
@@ -93,7 +99,6 @@ export const dom = (() => {
 
   const updateDayContainers = (data) => {
     let counter = 0;
-    console.log(data);
 
     dayContainers.forEach((container) => {
       const conditions = data.fiveDays[counter].conditions
@@ -113,5 +118,24 @@ export const dom = (() => {
     });
   };
 
-  return { updateDisplay, updateDayContainers };
+  const updateWidget = (data, country) => {
+    const temperature = document.querySelector('.widget-temperature');
+    const location = document.querySelector('.widget-location');
+    const conditions = document.querySelector('.widget-conditions');
+
+    temperature.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
+    location.textContent = `${data.city}, ${country}`;
+    conditions.textContent = data.desc;
+  };
+
+  const init = (data, country) => {
+    defaults.forEach((element, index) => {
+      if (index !== 2) {
+      } else {
+        updateWhole(data, country);
+      }
+    });
+  };
+
+  return { updateWhole };
 })();

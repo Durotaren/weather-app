@@ -1,6 +1,8 @@
 import { logic } from './logic';
 import { dom } from './dom';
 
+const defaults = ['Sydney', 'London', 'San Francisco'];
+
 const controller = (() => {
   const input = document.getElementById('search-input');
   const searchBtn = document.querySelector('.search-img');
@@ -28,8 +30,7 @@ const controller = (() => {
 
     const data = await logic.fetchWeather(formatInput);
     const cityData = await logic.fetchCountry(formatInput);
-    dom.updateDisplay(data, cityData);
-    dom.updateDayContainers(data);
+    dom.updateWhole(data, cityData);
     input.value = '';
   });
 })();

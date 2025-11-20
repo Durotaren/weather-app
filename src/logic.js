@@ -1,3 +1,5 @@
+const defaults = ['Sydney', 'London', 'San Francisco'];
+
 export const logic = (() => {
   const apiKey = 'A58FRBCCTVYQN9LT7Q79Z67WZ';
 
@@ -14,7 +16,6 @@ export const logic = (() => {
       }
 
       const data = await result.json();
-      console.log(data, data.days[0].datetime);
 
       return cleanData(data);
     } catch (err) {
