@@ -1,5 +1,3 @@
-const defaults = ['Sydney', 'London', 'San Francisco'];
-
 export const logic = (() => {
   const apiKey = 'A58FRBCCTVYQN9LT7Q79Z67WZ';
 
@@ -20,6 +18,7 @@ export const logic = (() => {
       return cleanData(data);
     } catch (err) {
       console.error(err);
+      return null;
     }
   };
 
@@ -38,6 +37,7 @@ export const logic = (() => {
       return clean.results[0].country;
     } catch (err) {
       console.error(err);
+      return null;
     }
   };
 

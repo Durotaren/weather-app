@@ -1,7 +1,6 @@
 import { logic } from './logic';
 import { dom } from './dom';
-
-const defaults = ['Sydney', 'London', 'San Francisco'];
+import { updateDefaults } from './storage';
 
 const controller = (() => {
   const input = document.getElementById('search-input');
@@ -31,6 +30,7 @@ const controller = (() => {
     const data = await logic.fetchWeather(formatInput);
     const cityData = await logic.fetchCountry(formatInput);
     dom.updateWhole(data, cityData);
+    updateDefaults(formatInput);
     input.value = '';
   });
 })();

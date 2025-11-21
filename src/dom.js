@@ -1,4 +1,5 @@
 import { logic } from './logic';
+import { defaults } from './storage';
 import sunnyIcon from './assets/svgs/sunny.svg';
 import partiallyClodyIcon from './assets/svgs/sunny-cloudy.svg';
 import overcastIcon from './assets/svgs/overcast.svg';
@@ -74,7 +75,6 @@ export const dom = (() => {
   const updateWhole = (data, country) => {
     updateDisplay(data, country);
     updateDayContainers(data);
-    updateWidget(data, country);
   };
 
   const updateDisplay = (data, country) => {
@@ -118,24 +118,34 @@ export const dom = (() => {
     });
   };
 
-  const updateWidget = (data, country) => {
-    const temperature = document.querySelector('.widget-temperature');
-    const location = document.querySelector('.widget-location');
-    const conditions = document.querySelector('.widget-conditions');
+  const updateWidget = (data, country, index) => {
+    const arr = Array.from(widgets);
+    const found = arr.find((ele) => ele.dataset.id == index);
+
+    const temperature = found.querySelector('.widget-temperature');
+    const location = found.querySelector('.widget-location');
+    const conditions = found.querySelector('.widget-conditions');
 
     temperature.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
     location.textContent = `${data.city}, ${country}`;
     conditions.textContent = data.desc;
   };
 
-  const init = (data, country) => {
-    defaults.forEach((element, index) => {
-      if (index !== 2) {
+  const init = async () => {
+    for (let i = 0; i < defaults.length; i++) {
+      const element = defaults[i];
+      const data = await logic.fetchWeather(element);
+      const cityData = await logic.fetchCountry(element);
+
+      if (i === 0) {
+        updateWhole(data, cityData);
       } else {
-        updateWhole(data, country);
+        updateWidget(data, cityData, i);
       }
-    });
+    }
   };
 
-  return { updateWhole };
+  return { updateWhole, init };
 })();
+
+dom.init();
