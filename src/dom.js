@@ -121,13 +121,23 @@ export const dom = (() => {
   const updateWidget = (data, country, index) => {
     const arr = Array.from(widgets);
     const found = arr.find((ele) => ele.dataset.id == index);
+    let countryVar = '';
+
+    if (country.split(' ').length < 2) {
+      countryVar = country;
+    } else {
+      let curr = country.split(' ');
+      for (let i = 0; i < curr.length; i++) {
+        countryVar += curr[i].charAt(0);
+      }
+    }
 
     const temperature = found.querySelector('.widget-temperature');
     const location = found.querySelector('.widget-location');
     const conditions = found.querySelector('.widget-conditions');
 
     temperature.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
-    location.textContent = `${data.city}, ${country}`;
+    location.textContent = `${data.city}, ${countryVar}`;
     conditions.textContent = data.desc;
   };
 
@@ -136,6 +146,10 @@ export const dom = (() => {
       const element = defaults[i];
       const data = await logic.fetchWeather(element);
       const cityData = await logic.fetchCountry(element);
+
+      if (data == null) {
+        return;
+      }
 
       if (i === 0) {
         updateWhole(data, cityData);
@@ -147,5 +161,3 @@ export const dom = (() => {
 
   return { updateWhole, init };
 })();
-
-dom.init();

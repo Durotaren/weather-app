@@ -89,7 +89,8 @@ span {
 }
 
 .main-weather-para {
-  color: rgb(204, 204, 204);
+  /* color: rgb(204, 204, 204); */
+  color: white;
   height: 170px;
 }
 
