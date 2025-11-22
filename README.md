@@ -1,27 +1,27 @@
-Weatherly 🌤️
+# Weatherly 🌤️
 
 Weatherly is a weather app that provides real-time forecasts for any city worldwide. It shows current temperature, highs and lows, sunrise and sunset times, hourly updates, and a 5-day outlook with dynamic icons and backgrounds. Recently searched cities are saved in handy widgets.
 
-Features
+## Features
 
-Search for any city and get current weather and forecasts.
+- Search for any city and get current weather and forecasts.
 
-5-day outlook with hourly updates.
+- 5-day outlook with hourly updates.
 
-Sunrise and sunset times.
+- Sunrise and sunset times.
 
-Dynamic icons and backgrounds matching the weather.
+- Dynamic icons and backgrounds matching the weather.
 
-Recently searched cities saved in widgets.
+- Recently searched cities saved in widgets.
 
-Technologies
+## Technologies
 
-JavaScript (ES6 Modules)
+- JavaScript (ES6 Modules)
 
-HTML & CSS
+- HTML & CSS
 
-Webpack (CSS, images, fonts)
+- Webpack (CSS, images, fonts)
 
-Visual Crossing Weather API
+- Visual Crossing Weather API
 
-Open-Meteo Geocoding API
+- Open-Meteo Geocoding API
