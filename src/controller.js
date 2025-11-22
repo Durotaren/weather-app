@@ -35,6 +35,12 @@ const controller = (() => {
     }
     input.value = '';
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && document.activeElement === input) {
+      searchBtn.click();
+    }
+  });
 })();
 
 dom.init();
