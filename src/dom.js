@@ -157,6 +157,10 @@ export const dom = (() => {
         updateWidget(data, cityData, i);
       }
     }
+
+    if (document.querySelector('.loading') !== null) {
+      document.querySelector('.loading').remove();
+    }
   };
 
   return { updateWhole, init };
