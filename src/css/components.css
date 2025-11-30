@@ -153,3 +153,26 @@ span {
 .widget-temperature {
   font-size: 1.625rem;
 }
+
+@media (max-width: 1153px) {
+  .main-weather {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (max-height: 896px) {
+  .sunrise-sunset-container {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-height: 876px) {
+  .sunrise-sunset-container {
+    margin: 2.5rem auto;
+  }
+
+  .hourly-container {
+    margin: 0 auto;
+  }
+}
