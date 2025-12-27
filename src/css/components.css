@@ -73,24 +73,21 @@ span {
 }
 
 .right-info {
-  margin-left: auto;
-  width: 360px;
-  font-size: 20px;
+  max-width: 360px;
+  font-size: 1.25rem;
 }
 
 .recently-searched {
   margin-left: auto;
 }
 
-.main-weather {
+.main-weather-para {
+  margin-top: 1.5rem;
+  color: white;
+  max-width: 80%;
   font-size: 3.5rem;
   text-wrap: balance;
   line-height: 4.25rem;
-}
-
-.main-weather-para {
-  color: white;
-  height: 170px;
 }
 
 .widget {
@@ -155,26 +152,3 @@ span {
 .widget-temperature {
   font-size: 1.625rem;
 }
-
-/* @media (max-width: 1153px) {
-  .main-weather {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-}
-
-@media (max-height: 896px) {
-  .sunrise-sunset-container {
-    margin-top: 3rem;
-  }
-}
-
-@media (max-height: 876px) {
-  .sunrise-sunset-container {
-    margin: 2.5rem auto;
-  }
-
-  .hourly-container {
-    margin: 0 auto;
-  }
-} */
