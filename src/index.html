@@ -22,7 +22,6 @@
           fill="transparent"
         />
       </svg>
-
       <div class="sunrise-sunset-container">
         <div class="sunrise">
           <p>Sunrise</p>
@@ -60,108 +59,114 @@
       </div>
     </div>
     <div class="main">
-      <div class="nav">
-        <div class="search glass">
-          <input type="text" name="" id="search-input" />
-          <img
-            class="search-img"
-            src="./assets/svgs/search.svg"
-            alt=""
-            width="20px"
-            height="20px"
-          />
-        </div>
-        <div class="download glass">Download</div>
-      </div>
-      <div class="location-bar">
-        <div>
-          <img
-            src="./assets/svgs/location.svg"
-            alt=""
-            width="24px"
-            height="24px"
-          />
-        </div>
-        <div class="location-text">
-          <p>Brooklyn, New York, USA</p>
-          <span>( Friday, January 4 )</span>
-        </div>
-      </div>
-      <div class="temperature-container">
-        <div class="left-temp">
-          <p class="temp">23&deg;C</p>
-          <div class="small-temps">
-            <div class="today high glass">
-              <p class="today-left">H</p>
-              <p class="today-right-high">29&deg;C</p>
+      <div class="main-upper">
+        <div class="upper-left">
+          <div class="location-bar">
+            <div>
+              <img
+                src="./assets/svgs/location.svg"
+                alt=""
+                width="24px"
+                height="24px"
+              />
             </div>
-            <div class="today low glass">
-              <p class="today-left">L</p>
-              <p class="today-right-low">12&deg;C</p>
+            <div class="location-text">
+              <p>Brooklyn, New York, USA</p>
+              <span>( Friday, January 4 )</span>
             </div>
           </div>
-        </div>
-        <div class="right-info">
-          <p>
-            With real time data and advanced technology, we provide reliable
-            forecasts for any location around the world.
-          </p>
-        </div>
-      </div>
-      <div class="recent-container">
-        <div class="recently-searched"><span>Recently Searched</span></div>
-        <div class="see-all">
-          <p>See All</p>
-          <img
-            src="./assets/svgs/arrow.svg"
-            alt=""
-            width="16px"
-            height="16px"
-          />
-        </div>
-      </div>
-      <div class="main-weather-container">
-        <div class="main-weather">
-          <p class="main-weather-para">Clear conditions throughout the day.</p>
-        </div>
-        <div class="widgets-container">
-          <div class="widget glass" data-id="1">
-            <div class="svg-temp-container">
-              <div>
-                <img
-                  class="widget-icon"
-                  src="./assets/svgs/sunny-cloudy.svg"
-                  alt=""
-                  width="48px"
-                  height="48px"
-                />
+          <div class="left-temp">
+            <p class="temp">23&deg;C</p>
+            <div class="small-temps">
+              <div class="today high glass">
+                <p class="today-left">H</p>
+                <p class="today-right-high">29&deg;C</p>
               </div>
-              <p class="widget-temperature">16&deg;C</p>
-            </div>
-            <div>
-              <p class="widget-location">Liverpool, UK</p>
-              <div>
-                <span class="widget-conditions">Partly Cloudy</span>
+              <div class="today low glass">
+                <p class="today-left">L</p>
+                <p class="today-right-low">12&deg;C</p>
               </div>
             </div>
           </div>
-          <div class="widget glass" data-id="2">
-            <div class="svg-temp-container">
-              <div>
-                <img
-                  class="widget-icon"
-                  src="./assets/svgs/sunny-cloudy.svg"
-                  alt=""
-                  width="48px"
-                  height="48px"
-                />
-              </div>
-              <p class="widget-temperature">-2&deg;C</p>
+          <div class="main-weather-container">
+            <div class="main-weather">
+              <p class="main-weather-para">
+                Clear conditions throughout the day.
+              </p>
             </div>
-            <div>
-              <p class="widget-location">Palermo, Italy</p>
+          </div>
+        </div>
+        <div class="upper-right">
+          <div class="nav">
+            <div class="search glass">
+              <input type="text" name="" id="search-input" />
+              <img
+                class="search-img"
+                src="./assets/svgs/search.svg"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </div>
+            <div class="download glass">Download</div>
+          </div>
+          <div class="right-info">
+            <p>
+              With real time data and advanced technology, we provide reliable
+              forecasts for any location around the world.
+            </p>
+          </div>
+          <div class="recent-container">
+            <div class="recently-searched"><span>Recently Searched</span></div>
+            <div class="see-all">
+              <p>See All</p>
+              <img
+                src="./assets/svgs/arrow.svg"
+                alt=""
+                width="16px"
+                height="16px"
+              />
+            </div>
+          </div>
+          <div class="widgets-container">
+            <div class="widget glass" data-id="1">
+              <div class="svg-temp-container">
+                <div>
+                  <img
+                    class="widget-icon"
+                    src="./assets/svgs/sunny-cloudy.svg"
+                    alt=""
+                    width="48px"
+                    height="48px"
+                  />
+                </div>
+                <p class="widget-temperature">16&deg;C</p>
+              </div>
               <div>
-                <span class="widget-conditions">Thunderstorm</span>
+                <p class="widget-location">Liverpool, UK</p>
+                <div>
+                  <span class="widget-conditions">Partly Cloudy</span>
+                </div>
+              </div>
+            </div>
+            <div class="widget glass" data-id="2">
+              <div class="svg-temp-container">
+                <div>
+                  <img
+                    class="widget-icon"
+                    src="./assets/svgs/sunny-cloudy.svg"
+                    alt=""
+                    width="48px"
+                    height="48px"
+                  />
+                </div>
+                <p class="widget-temperature">-2&deg;C</p>
+              </div>
+              <div>
+                <p class="widget-location">Palermo, Italy</p>
+                <div>
+                  <span class="widget-conditions">Thunderstorm</span>
+                </div>
               </div>
             </div>
           </div>

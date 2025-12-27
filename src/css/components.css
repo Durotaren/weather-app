@@ -11,13 +11,13 @@
 .column {
   min-height: 90%;
   width: 320px;
-  margin-left: 54px;
   border-radius: 32px;
 }
 
 .main {
   flex: 1;
-  margin-right: 54px;
+  min-height: 90%;
+  justify-content: space-between;
 }
 
 .search {
@@ -136,6 +136,7 @@ span {
   border: 2px solid rgba(255, 255, 255, 0.2);
   width: 80%;
   border-radius: 25px;
+  display: none;
 }
 
 .hourly-container {
@@ -144,6 +145,7 @@ span {
   border-radius: 25px;
   margin: 8px auto 0;
   padding: 16px;
+  display: none;
 }
 
 .widget-location {
@@ -154,7 +156,7 @@ span {
   font-size: 1.625rem;
 }
 
-@media (max-width: 1153px) {
+/* @media (max-width: 1153px) {
   .main-weather {
     font-size: 3rem;
     line-height: 3.5rem;
@@ -175,4 +177,4 @@ span {
   .hourly-container {
     margin: 0 auto;
   }
-}
+} */

@@ -2,6 +2,16 @@ body {
   display: flex;
   align-items: center;
   gap: 3rem;
+  padding: 0 54px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-upper {
+  display: flex;
 }
 
 .nav {
@@ -87,7 +97,7 @@ body {
 }
 
 .day-container {
-  height: 285px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
