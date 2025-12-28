@@ -75,6 +75,7 @@ span {
 .right-info {
   max-width: 360px;
   font-size: 1.25rem;
+  padding-bottom: 3rem;
 }
 
 .recently-searched {

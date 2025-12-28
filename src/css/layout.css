@@ -25,7 +25,8 @@ body {
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  align-items: center;
+  gap: 5rem;
 }
 
 .nav {
