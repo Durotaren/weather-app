@@ -1,8 +1,8 @@
 .glass {
   background: rgba(255, 255, 255, 0.1);
   color: white;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* Safari support */
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -35,7 +35,7 @@
 
 .location-text {
   color: white;
-  font-size: 18px;
+  font-size: clamp(0.875rem, 1.25vw, 1.4rem);
 }
 
 span {
@@ -44,7 +44,7 @@ span {
 
 .temp {
   color: white;
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
   font-weight: 300;
 }
 
@@ -54,8 +54,9 @@ span {
 
 .today {
   width: 100px;
+  width: clamp(3.125rem, 5.15vw, 6.25rem);
   border-radius: 35px;
-  font-size: 20px;
+  font-size: clamp(0.875rem, 1.25vw, 1.25rem);
 }
 
 .high {
@@ -83,12 +84,12 @@ span {
 }
 
 .main-weather-para {
-  margin-top: 1.5rem;
   color: white;
   max-width: 80%;
-  font-size: 3.5rem;
+  font-size: clamp(2.625rem, 3.9vw, 3.85rem);
   text-wrap: balance;
-  line-height: 4.25rem;
+  line-height: 1.1;
+  padding-top: 1.25rem;
 }
 
 .widget {

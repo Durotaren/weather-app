@@ -17,8 +17,8 @@ body {
 .upper-left {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  margin-top: 3.2rem;
+  justify-content: space-around;
+  margin-top: 2rem;
 }
 
 .upper-right {

@@ -83,7 +83,10 @@ export const dom = (() => {
     todayLow.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmin))}°C`;
     body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
     mainWeatherPara.textContent = data.fiveDays[0].description;
-    locationDiv.firstElementChild.textContent = `${data.city}, ${country}`;
+    console.log(data.fiveDays[0].description.length);
+
+    locationDiv.firstElementChild.textContent =
+      country === undefined ? `${data.city}` : `${data.city}, ${country}`;
     updateSunriseSunset(data);
     updateHourly(data);
     const newDate = new Date(data.fiveDays[0].datetime);
@@ -123,12 +126,14 @@ export const dom = (() => {
     const found = arr.find((ele) => ele.dataset.id == index);
     let countryVar = '';
 
-    if (country.split(' ').length < 2) {
-      countryVar = country;
-    } else {
-      let curr = country.split(' ');
-      for (let i = 0; i < curr.length; i++) {
-        countryVar += curr[i].charAt(0);
+    if (country !== null && country !== undefined) {
+      if (country.split(' ').length < 2) {
+        countryVar = country;
+      } else {
+        let curr = country.split(' ');
+        for (let i = 0; i < curr.length; i++) {
+          countryVar += curr[i].charAt(0);
+        }
       }
     }
 
@@ -137,7 +142,9 @@ export const dom = (() => {
     const conditions = found.querySelector('.widget-conditions');
 
     temperature.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
-    location.textContent = `${data.city}, ${countryVar}`;
+    location.textContent = countryVar
+      ? `${data.city}, ${countryVar}`
+      : `${data.city}`;
     conditions.textContent = data.desc;
   };
 
