@@ -9,27 +9,26 @@
 }
 
 .column {
-  min-height: 90%;
+  min-height: 90svh;
   width: 320px;
   border-radius: 32px;
 }
 
 .main {
   flex: 1;
-  min-height: 90%;
+  min-height: 90svh;
   justify-content: space-between;
 }
 
 .search {
-  margin-left: auto;
-  height: 48px;
-  width: 220px;
+  height: 3rem;
+  width: clamp(190px, 15.3vw, 220px);
   border-radius: 30px;
 }
 
 .download {
-  height: 48px;
-  width: 125px;
+  height: 3rem;
+  width: clamp(100px, 8.7vw, 125px);
   border-radius: 35px;
 }
 
@@ -44,7 +43,7 @@ span {
 
 .temp {
   color: white;
-  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
   font-weight: 300;
 }
 
@@ -53,8 +52,7 @@ span {
 }
 
 .today {
-  width: 100px;
-  width: clamp(3.125rem, 5.15vw, 6.25rem);
+  width: clamp(3.125rem, 6.5vw, 6rem);
   border-radius: 35px;
   font-size: clamp(0.875rem, 1.25vw, 1.25rem);
 }
@@ -93,8 +91,8 @@ span {
 }
 
 .widget {
-  width: 175px;
-  height: 175px;
+  width: clamp(140px, 12vw, 175px);
+  aspect-ratio: 1 / 1;
   border-radius: 35px;
 }
 
@@ -111,13 +109,11 @@ span {
 }
 
 .search-img {
-  margin-right: 12px;
-  margin-left: auto;
   cursor: pointer;
 }
 
 #search-input {
-  margin-left: 20px;
+  padding-left: 0.5vw;
 }
 
 .column-title {
@@ -126,7 +122,8 @@ span {
 }
 
 .column p {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
 }
 
 .sunrise-sunset-container {
@@ -135,7 +132,6 @@ span {
   border: 2px solid rgba(255, 255, 255, 0.2);
   width: 80%;
   border-radius: 25px;
-  display: none;
 }
 
 .hourly-container {
@@ -144,7 +140,6 @@ span {
   border-radius: 25px;
   margin: 8px auto 0;
   padding: 16px;
-  display: none;
 }
 
 .widget-location {
@@ -153,4 +148,9 @@ span {
 
 .widget-temperature {
   font-size: 1.625rem;
+}
+
+.sun-svg {
+  width: clamp(32px, 4vw, 48px);
+  aspect-ratio: 1 / 1;
 }
