@@ -10,8 +10,10 @@
 
 .column {
   min-height: 90svh;
-  width: 320px;
+  width: 18.5vw;
   border-radius: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -52,9 +54,9 @@ span {
 }
 
 .today {
-  width: clamp(3.125rem, 6.5vw, 6rem);
+  width: clamp(4.5rem, 6.5vw, 6rem);
   border-radius: 35px;
-  font-size: clamp(0.875rem, 1.25vw, 1.25rem);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 
 .high {
@@ -77,10 +79,6 @@ span {
   padding-bottom: 3rem;
 }
 
-.recently-searched {
-  margin-left: auto;
-}
-
 .main-weather-para {
   color: white;
   max-width: 80%;
@@ -91,13 +89,9 @@ span {
 }
 
 .widget {
-  width: clamp(140px, 12vw, 175px);
+  width: clamp(150px, 12vw, 175px);
   aspect-ratio: 1 / 1;
   border-radius: 35px;
-}
-
-.day-container {
-  width: 123px;
 }
 
 .days-container > .day-container > p {
@@ -114,6 +108,7 @@ span {
 
 #search-input {
   padding-left: 0.5vw;
+  width: clamp(8.75rem, 9.7vw, 10.3rem);
 }
 
 .column-title {
@@ -122,13 +117,11 @@ span {
 }
 
 .column p {
-  /* font-size: 1.5rem; */
   font-size: clamp(1.1rem, 1.5vw, 1.5rem);
 }
 
 .sunrise-sunset-container {
   padding: 16px;
-  margin-top: 4rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   width: 80%;
   border-radius: 25px;
@@ -138,7 +131,7 @@ span {
   border: 2px solid rgba(255, 255, 255, 0.2);
   width: 80%;
   border-radius: 25px;
-  margin: 8px auto 0;
+  /* margin: 16px auto 0; */
   padding: 16px;
 }
 
@@ -146,8 +139,12 @@ span {
   font-size: 1.125rem;
 }
 
+.widget-icon {
+  width: clamp(40px, 4vw, 48px);
+}
+
 .widget-temperature {
-  font-size: 1.625rem;
+  font-size: clamp(1.4rem, 1.8vw, 1.625rem);
 }
 
 .sun-svg {
