@@ -79,17 +79,28 @@ export const dom = (() => {
 
   const updateDisplay = (data, country) => {
     tempDisplay.textContent = `${data.currentTemp}°C`;
-    console.log(data.currentTemp);
-
     todayHigh.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
     todayLow.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmin))}°C`;
     body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
     mainWeatherPara.textContent = data.fiveDays[0].description;
 
+    let countryVar = '';
+
+    if (country !== null && country !== undefined) {
+      if (country.split(' ').length < 2) {
+        countryVar = country;
+      } else {
+        let curr = country.split(' ');
+        for (let i = 0; i < curr.length; i++) {
+          countryVar += curr[i].charAt(0);
+        }
+      }
+    }
+
     if (country === null || country === undefined) {
       locationDiv.firstElementChild.textContent = `${data.city}`;
     } else {
-      locationDiv.firstElementChild.textContent = `${data.city}, ${country}`;
+      locationDiv.firstElementChild.textContent = `${data.city}, ${countryVar}`;
     }
 
     updateSunriseSunset(data);

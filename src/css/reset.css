@@ -19,3 +19,7 @@ input {
 button {
   cursor: pointer;
 }
+
+img {
+  display: block;
+}

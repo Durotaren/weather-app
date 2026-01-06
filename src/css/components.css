@@ -16,12 +16,6 @@
   flex-direction: column;
 }
 
-.main {
-  flex: 1;
-  min-height: 90svh;
-  justify-content: space-between;
-}
-
 .search {
   height: 3rem;
   width: clamp(190px, 15.3vw, 220px);
@@ -94,11 +88,11 @@ span {
   border-radius: 35px;
 }
 
-.days-container > .day-container > p {
+.day-container > p {
   font-size: 1.5rem;
 }
 
-.days-container > .day-container > p.degrees {
+.day-container > p.degrees {
   font-size: 2.5rem;
 }
 
