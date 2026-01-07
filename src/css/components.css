@@ -2,7 +2,7 @@
   background: rgba(255, 255, 255, 0.1);
   color: white;
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); /* Safari support */
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -28,8 +28,12 @@
   border-radius: 35px;
 }
 
-.location-text {
+.only-location {
   color: white;
+  font-size: clamp(0.875rem, 1.25vw, 1.4rem);
+}
+
+.only-date {
   font-size: clamp(0.875rem, 1.25vw, 1.4rem);
 }
 
@@ -39,7 +43,7 @@ span {
 
 .temp {
   color: white;
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-size: clamp(3.5rem, 5.5vw, 5rem);
   font-weight: 300;
 }
 
@@ -125,7 +129,6 @@ span {
   border: 2px solid rgba(255, 255, 255, 0.2);
   width: 80%;
   border-radius: 25px;
-  /* margin: 16px auto 0; */
   padding: 16px;
 }
 
@@ -144,4 +147,8 @@ span {
 .sun-svg {
   width: clamp(32px, 4vw, 48px);
   aspect-ratio: 1 / 1;
+}
+
+.day-img {
+  width: 72px;
 }

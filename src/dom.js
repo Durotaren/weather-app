@@ -23,6 +23,8 @@ export const dom = (() => {
   const sunsetPara = document.querySelector('.sunset-time');
   const hourlyTemperatures = document.querySelectorAll('.hourly-temperature');
   const widgets = document.querySelectorAll('.widget');
+  const locationOnly = document.querySelector('.only-location');
+  const dateOnly = document.querySelector('.only-date');
 
   const chooseSvg = (data) => {
     switch (data) {
@@ -98,22 +100,19 @@ export const dom = (() => {
     }
 
     if (country === null || country === undefined) {
-      locationDiv.firstElementChild.textContent = `${data.city}`;
+      locationOnly.textContent = `${data.city}`;
     } else {
-      locationDiv.firstElementChild.textContent = `${data.city}, ${countryVar}`;
+      locationOnly.textContent = `${data.city}, ${countryVar}`;
     }
 
     updateSunriseSunset(data);
     updateHourly(data);
     const newDate = new Date(data.fiveDays[0].datetime);
-    locationDiv.lastElementChild.textContent = `( ${newDate.toLocaleDateString(
-      'en-US',
-      {
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric',
-      }
-    )} )`;
+    dateOnly.textContent = `( ${newDate.toLocaleDateString('en-US', {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+    })} )`;
   };
 
   const updateDayContainers = (data) => {

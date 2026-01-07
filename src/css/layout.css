@@ -58,11 +58,6 @@ body {
   align-items: center;
 }
 
-.location-text {
-  display: flex;
-  gap: 0.3rem;
-}
-
 .left-temp {
   display: flex;
   align-items: center;
@@ -179,7 +174,7 @@ body {
   }
 }
 
-@media (max-width: 633px) {
+@media (max-width: 660px) {
   div.column {
     display: none;
   }
@@ -210,9 +205,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .location-text {
-    font-size: 1.125rem;
-  }
 
   .days-container > .day-container > p {
     font-size: 1.25rem;
@@ -220,5 +212,23 @@ body {
 
   .days-container > .day-container > p.degrees {
     font-size: 2.1rem;
+  }
+
+  .main-weather-para {
+    text-align: center;
+  }
+}
+
+@media (max-width: 574px) {
+  .days-container > .day-container > p {
+    font-size: 1.125rem;
+  }
+
+  .days-container > .day-container > p.degrees {
+    font-size: 1.9rem;
+  }
+
+  .days-container .day-img {
+    width: 3.5rem;
   }
 }
