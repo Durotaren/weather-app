@@ -18,7 +18,6 @@ export const dom = (() => {
   const todayHigh = document.querySelector('.today-right-high');
   const todayLow = document.querySelector('.today-right-low');
   const mainWeatherPara = document.querySelector('.main-weather-para');
-  const locationDiv = document.querySelector('.location-text');
   const sunrisePara = document.querySelector('.sunrise-time');
   const sunsetPara = document.querySelector('.sunset-time');
   const hourlyTemperatures = document.querySelectorAll('.hourly-temperature');
@@ -155,9 +154,10 @@ export const dom = (() => {
     const temperature = found.querySelector('.widget-temperature');
     const location = found.querySelector('.widget-location');
     const conditions = found.querySelector('.widget-conditions');
+    const widgetIcon = found.querySelector('.widget-icon');
 
     temperature.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].temp))}°C`;
-    console.log(data.fiveDays[0]);
+    widgetIcon.src = chooseSvg(data.desc);
 
     location.textContent = countryVar
       ? `${data.city}, ${countryVar}`

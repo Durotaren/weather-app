@@ -30,11 +30,11 @@
 
 .only-location {
   color: white;
-  font-size: clamp(0.875rem, 1.25vw, 1.4rem);
+  font-size: clamp(1rem, 1.25vw, 1.3rem);
 }
 
 .only-date {
-  font-size: clamp(0.875rem, 1.25vw, 1.4rem);
+  font-size: clamp(1rem, 1.25vw, 1.3rem);
 }
 
 span {
@@ -151,4 +151,10 @@ span {
 
 .day-img {
   width: 72px;
+}
+
+@media (861px <= width <= 938px) {
+  .main-weather-para {
+    padding-top: 0;
+  }
 }

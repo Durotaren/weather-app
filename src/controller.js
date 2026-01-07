@@ -28,7 +28,6 @@ const controller = (() => {
     }
 
     const data = await logic.fetchWeather(formatInput);
-    const cityData = await logic.fetchCountry(formatInput);
     if (data !== null) {
       updateDefaults(formatInput);
       dom.init();
