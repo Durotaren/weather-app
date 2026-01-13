@@ -13,47 +13,51 @@
   <body>
     <div class="loading">Loading...</div>
     <aside class="column glass">
-      <div class="column-title-container">
-        <p class="column-title">Weatherly</p>
-        <div class="path-holder">
-          <svg
-            viewBox="0 0 120 20"
-            width="100%"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <path
-              d="M 5 15 Q 60 0 115 15"
-              stroke="white"
-              stroke-width="2"
-              fill="none"
-            />
-          </svg>
-        </div>
-      </div>
-      <div class="column-second-container">
-        <div class="sunrise-sunset-container">
+      <header class="column-title-container">
+        <h1 class="column-title">Weatherly</h1>
+        <svg
+          viewBox="0 0 120 20"
+          width="55%"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            d="M 5 15 Q 60 0 115 15"
+            stroke="white"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
+      </header>
+
+      <section class="column-second-container">
+        <section class="sunrise-sunset-container">
           <div class="sunrise">
-            <p>Sunrise</p>
+            <h2>Sunrise</h2>
             <img src="./assets/svgs/sunrise.svg" alt="" class="sun-svg" />
-            <p class="sunrise-time">6:49</p>
+            <time class="sunrise-time">6:49</time>
           </div>
+
           <div class="sunset">
-            <p>Sunset</p>
+            <h2>Sunset</h2>
             <img src="./assets/svgs/sunset.svg" alt="" class="sun-svg" />
-            <p class="sunset-time">17:04</p>
+            <time class="sunset-time">17:04</time>
           </div>
-        </div>
-        <div class="hourly-container">
-          <p>Hourly Forecast</p>
-          <p class="hourly-temperature">12:00 8C&deg;</p>
-          <p class="hourly-temperature">12:00 8C&deg;</p>
-          <p class="hourly-temperature">12:00 8C&deg;</p>
-          <p class="hourly-temperature">12:00 8C&deg;</p>
-          <p class="hourly-temperature">12:00 8C&deg;</p>
-          <p class="hourly-temperature">12:00 8C&deg;</p>
-        </div>
-      </div>
+        </section>
+
+        <section class="hourly-container">
+          <h2>Hourly Forecast</h2>
+          <ul class="hourly-temperatures-container">
+            <li class="hourly-temperature">12:00 8C&deg;</li>
+            <li class="hourly-temperature">12:00 8C&deg;</li>
+            <li class="hourly-temperature">12:00 8C&deg;</li>
+            <li class="hourly-temperature">12:00 8C&deg;</li>
+            <li class="hourly-temperature">12:00 8C&deg;</li>
+            <li class="hourly-temperature">12:00 8C&deg;</li>
+          </ul>
+        </section>
+      </section>
     </aside>
+
     <div class="main">
       <div class="main-upper">
         <div class="upper-left">

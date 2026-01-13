@@ -110,13 +110,22 @@ span {
   width: clamp(8.75rem, 9.7vw, 10.3rem);
 }
 
-.column-title {
-  font-size: 2rem;
+h1.column-title {
+  font-weight: normal;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
   padding-top: 2.5rem;
 }
 
-.column p {
+.column h2,
+.column p,
+.column time,
+.column li {
+  font-weight: normal;
   font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+}
+
+li {
+  list-style: none;
 }
 
 .sunrise-sunset-container {

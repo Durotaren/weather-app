@@ -90,8 +90,6 @@ export const dom = (() => {
 
   const updateDisplay = (data, country) => {
     tempDisplay.textContent = `${data.currentTemp}°C`;
-    console.log(data.currentTemp, data);
-
     todayHigh.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
     todayLow.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmin))}°C`;
     body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
@@ -178,7 +176,7 @@ export const dom = (() => {
     location.textContent = countryVar
       ? `${data.city}, ${countryVar}`
       : `${data.city}`;
-    conditions.textContent = data.desc;
+    conditions.textContent = data.desc.split(',')[0];
   };
 
   const init = async () => {
