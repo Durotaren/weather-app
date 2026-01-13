@@ -40,6 +40,14 @@ export const dom = (() => {
     }
   };
 
+  const chooseAccentColor = (data) => {
+    if (data === 'Clear' || data === 'Rain' || data === 'Snow') {
+      return '#111828';
+    } else {
+      return '#B8B8B8';
+    }
+  };
+
   const chooseBackground = (data) => {
     switch (data) {
       case 'Clear':
@@ -83,6 +91,10 @@ export const dom = (() => {
     todayHigh.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
     todayLow.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmin))}°C`;
     body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
+    document.documentElement.style.setProperty(
+      '--accent-color',
+      `${chooseAccentColor(data.fiveDays[0].conditions)}`
+    );
     mainWeatherPara.textContent = data.fiveDays[0].description;
 
     let countryVar = '';

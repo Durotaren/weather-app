@@ -168,14 +168,14 @@ body {
   }
 }
 
-@media (max-width: 861px) {
-  div.column {
+@media (max-width: 880px) {
+  aside.column {
     display: none;
   }
 }
 
-@media (max-width: 660px) {
-  div.column {
+@media (max-width: 670px) {
+  aside.column {
     display: none;
   }
 
