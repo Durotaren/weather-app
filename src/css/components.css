@@ -166,3 +166,11 @@ span {
     flex-direction: column;
   }
 }
+
+.see-all {
+  transition: transform 0.4s;
+}
+
+.see-all:hover {
+  transform: translateX(-10px);
+}

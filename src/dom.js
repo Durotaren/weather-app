@@ -1,7 +1,7 @@
 import { logic } from './logic';
 import { defaults } from './storage';
 import sunnyIcon from './assets/svgs/sunny.svg';
-import partiallyClodyIcon from './assets/svgs/sunny-cloudy.svg';
+import partiallyCloudyIcon from './assets/svgs/sunny-cloudy.svg';
 import overcastIcon from './assets/svgs/overcast.svg';
 import rainyIcon from './assets/svgs/rainy.svg';
 import snowyIcon from './assets/svgs/snowy.svg';
@@ -30,13 +30,15 @@ export const dom = (() => {
       case 'Clear':
         return sunnyIcon;
       case 'Partially cloudy':
-        return partiallyClodyIcon;
+        return partiallyCloudyIcon;
       case 'Overcast':
         return overcastIcon;
       case 'Rain':
         return rainyIcon;
       case 'Snow':
         return snowyIcon;
+      default:
+        return sunnyIcon;
     }
   };
 
@@ -88,6 +90,8 @@ export const dom = (() => {
 
   const updateDisplay = (data, country) => {
     tempDisplay.textContent = `${data.currentTemp}°C`;
+    console.log(data.currentTemp, data);
+
     todayHigh.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmax))}°C`;
     todayLow.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].tempmin))}°C`;
     body.style.backgroundImage = `url(${chooseBackground(data.fiveDays[0].conditions)})`;
@@ -168,8 +172,8 @@ export const dom = (() => {
     const conditions = found.querySelector('.widget-conditions');
     const widgetIcon = found.querySelector('.widget-icon');
 
-    temperature.textContent = `${Math.round(logic.fahrenheitToC(data.fiveDays[0].temp))}°C`;
-    widgetIcon.src = chooseSvg(data.desc);
+    temperature.textContent = `${data.currentTemp}°C`;
+    widgetIcon.src = chooseSvg(data.desc.split(',')[0]);
 
     location.textContent = countryVar
       ? `${data.city}, ${countryVar}`
