@@ -238,3 +238,18 @@ body {
     width: 3.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .days-container {
+    flex-direction: column;
+  }
+
+  .day-of-the-week {
+    width: 95px;
+  }
+
+  .day-container {
+    height: auto;
+    flex-direction: row;
+  }
+}
