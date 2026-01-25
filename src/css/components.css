@@ -38,8 +38,6 @@
 }
 
 span {
-  /* color: rgb(124 131 136); */
-  /* color: #111828; */
   color: var(--accent-color);
 }
 

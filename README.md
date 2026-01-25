@@ -1,4 +1,4 @@
-# Weatherly 🌤️
+# Weatherly
 
 Weatherly is a weather app that provides real-time forecasts for any city worldwide. It shows current temperature, highs and lows, sunrise and sunset times, hourly updates, and a 5-day outlook with dynamic icons and backgrounds. Recently searched cities are saved in handy widgets.
 

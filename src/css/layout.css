@@ -253,3 +253,17 @@ body {
     flex-direction: row;
   }
 }
+
+@media (max-width: 360px) {
+  .days-container .day-img {
+    width: 48px;
+  }
+
+  body {
+    padding: 16px;
+  }
+
+  div.search {
+    width: 17rem;
+  }
+}
